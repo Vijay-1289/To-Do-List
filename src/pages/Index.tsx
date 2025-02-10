@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { TaskForm } from "@/components/TaskForm";
 import { TaskList } from "@/components/TaskList";
 import { TaskStats } from "@/components/TaskStats";
-import { ThemeToggle } from "@/components/ThemeToggle";
 
 interface Task {
   id: string;
@@ -52,14 +51,13 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background transition-colors duration-300">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       <div className="container py-8 px-4 mx-auto max-w-4xl">
-        <ThemeToggle />
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold mb-2 text-foreground">
+          <h1 className="text-4xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-gray-800 to-gray-600">
             Time-Bound Tasks
           </h1>
-          <p className="text-muted-foreground">Manage your tasks efficiently</p>
+          <p className="text-gray-600">Manage your tasks efficiently</p>
         </div>
 
         <TaskStats {...stats} />
